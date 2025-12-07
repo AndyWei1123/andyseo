@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andy SEO - 網站架設與 SEO 完整服務</title>
+    <link rel="icon" href="https://andy-wei.com/wp-content/uploads/2025/03/未命名-Instagram-貼文.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; }
+        
+        .typing-dot {
+            animation: typing 1.4s infinite ease-in-out both;
+        }
+        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+        
+        @keyframes typing {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .glass {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 overflow-x-hidden selection:bg-indigo-500 selection:text-white">
+
+    <nav class="fixed top-0 w-full z-50 glass transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="https://andy-wei.com/wp-content/uploads/2025/03/未命名-Instagram-貼文.png" alt="Andy Wei Logo" class="w-10 h-10 rounded-full object-cover shadow-lg shadow-indigo-500/20 border border-indigo-500/30">
+                    <span class="font-bold text-xl tracking-wider text-white">Andy-Wei<span class="text-indigo-400">.com</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#services" class="hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-colors">服務介紹</a>
+                        <a href="#web-portfolio" class="hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-colors">網站案例</a>
+                        <a href="#seo-portfolio" class="hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-colors">SEO 實績</a>
+                        <a href="#ai-demo" class="text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-full text-sm font-medium transition-all shadow-lg shadow-indigo-500/30">AI 推薦展示</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-slate-400 hover:text-white">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-slate-900 border-b border-slate-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#services" class="block px-3 py-4 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">服務介紹</a>
+                <a href="#web-portfolio" class="block px-3 py-4 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">網站案例</a>
+                <a href="#seo-portfolio" class="block px-3 py-4 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">SEO 實績</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Updated Copywriting) -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
+            <div class="absolute top-20 right-0 w-96 h-96 bg-purple-600/20 rounded-full blur-[100px] animate-pulse"></div>
+            <div class="absolute bottom-20 left-0 w-72 h-72 bg-indigo-600/20 rounded-full blur-[80px]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 mb-8 backdrop-blur-sm">
+                <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 3.214L13 21l-2.286-6.857L5 12l5.714-3.214L13 3z"></path></svg>
+                <span class="text-sm font-medium text-indigo-300">為 AI 時代打造的數位資產</span>
+            </div>
+
+            <h1 class="mb-8">
+                <span class="block text-xl md:text-3xl font-medium text-slate-400 mb-2 tracking-wide">不只做網站，</span>
+                <span class="block text-4xl md:text-7xl font-extrabold text-white leading-tight">
+                    更打造
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+                        能帶來客戶的<br class="md:hidden" />線上門面
+                    </span>
+                </span>
+            </h1>
+
+            <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-slate-400 mb-10 leading-relaxed">
+                結合客製化設計與 AI SEO 策略，<br class="hidden md:block"/>
+                讓您的品牌同時登上 <b>Google 排名</b> 與 <b>AI 推薦曝光</b>。
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://lin.ee/5aCPj7m" target="_blank" class="px-8 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-slate-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.3)] flex items-center justify-center gap-2">
+                    立即諮詢
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+                <a href="#web-portfolio" class="px-8 py-4 bg-transparent border border-slate-700 text-white rounded-full font-bold hover:border-slate-500 hover:bg-slate-800/50 transition-all flex items-center justify-center gap-2">
+                    查看案例
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-slate-900/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">全方位數位服務，一站式搞定</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">
+                    從網站架構、品牌呈現、流量成長到 AI 搜尋推薦——<br />
+                    我們替您處理技術細節，讓您專心經營事業。
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="group p-8 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:bg-slate-800 hover:shadow-2xl hover:shadow-cyan-500/10 flex flex-col">
+                    <div class="w-14 h-14 rounded-xl bg-slate-900 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-slate-700">
+                        <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">客製化網站開發</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed text-sm">以品牌定位為核心打造專業官網，提升手機版體驗、加快讀取速度、提升客戶信任感。</p>
+                    <div class="mt-auto pt-4 border-t border-slate-700/50">
+                        <h4 class="text-cyan-400 text-xs font-bold mb-2 uppercase">您將得到：</h4>
+                        <ul class="space-y-2 text-sm text-slate-300">
+                            <li class="flex items-start"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 mr-2 flex-shrink-0"></div>專屬品牌版型與配色</li>
+                            <li class="flex items-start"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 mr-2 flex-shrink-0"></div>行動裝置友善的設計</li>
+                            <li class="flex items-start"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 mr-2 flex-shrink-0"></div>專業可信任的企業風格</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="group p-8 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-purple-500/50 transition-all duration-300 hover:bg-slate-800 hover:shadow-2xl hover:shadow-purple-500/10 flex flex-col">
+                    <div class="w-14 h-14 rounded-xl bg-slate-900 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-slate-700">
+                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">SEO 搜尋引擎優化</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed text-sm">從技術結構、內容規劃到網站權威度，以完整 SEO 策略讓您在 Google 上被更多潛在客戶找到。</p>
+                    <div class="mt-auto pt-4 border-t border-slate-700/50">
+                        <h4 class="text-purple-400 text-xs font-bold mb-2 uppercase">成效包含：</h4>
+                        <ul class="space-y-2 text-sm text-slate-300">
+                            <li class="flex items-start"><div class="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 mr-2 flex-shrink-0"></div>流量成長</li>
+                            <li class="flex items-start"><div class="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 mr-2 flex-shrink-0"></div>關鍵字排名提升</li>
+                            <li class="flex items-start"><div class="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 mr-2 flex-shrink-0"></div>增加詢問、線索與轉換</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="group p-8 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-pink-500/50 transition-all duration-300 hover:bg-slate-800 hover:shadow-2xl hover:shadow-pink-500/10 flex flex-col">
+                    <div class="w-14 h-14 rounded-xl bg-slate-900 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-slate-700">
+                        <svg class="w-8 h-8 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">AI 搜尋曝光優化 (AI SEO)</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed text-sm">AI 正在成為新的搜尋入口。我們替您建立 AI 友善的網站內容與資料結構，讓 ChatGPT、Gemini 等模型能理解並引用您的品牌。</p>
+                    <div class="mt-auto pt-4 border-t border-slate-700/50">
+                        <h4 class="text-pink-400 text-xs font-bold mb-2 uppercase">這代表：</h4>
+                        <ul class="space-y-2 text-sm text-slate-300">
+                            <li class="flex items-start"><div class="w-1.5 h-1.5 rounded-full bg-pink-500 mt-1.5 mr-2 flex-shrink-0"></div>客戶問 AI → AI 推薦你</li>
+                            <li class="flex items-start"><div class="w-1.5 h-1.5 rounded-full bg-pink-500 mt-1.5 mr-2 flex-shrink-0"></div>品牌成為行業中的「首選答案」</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="web-portfolio" class="py-24 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <span class="text-cyan-400 font-bold tracking-wider text-sm uppercase">Web Design Showcase</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mt-2 mb-4">網站設計案例精選</h2>
+                <p class="text-slate-400 max-w-2xl">我們重視 UX 使用者體驗與 UI 視覺設計的平衡，讓每個網站不只是好看，更能帶來轉換與信任。</p>
+            </div>
+
+            <div class="space-y-24">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                        <div class="relative bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-2xl">
+                            <img src="https://andy-wei.com/wp-content/uploads/2025/12/截圖-2025-12-07-下午5.27.02.png" alt="Fintech Dashboard" class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-cyan-400 font-medium mb-2">台灣投顧網站設計</div>
+                        <h3 class="text-2xl font-bold text-white mb-4">AI × 量化投資 × 金融科技介面
+                        </h3>
+                        <div class="space-y-6 mb-8">
+                            <div>
+                                <h4 class="text-white font-medium mb-1">金融科技專屬的品牌視覺設計</h4>
+                                <p class="text-slate-400 text-sm">採用黃色的品牌配色與簡潔的版面配置，傳達穩定、專業、科技感。
+                                畫面搭配即時股價圖、AI 評分與盤中資訊，使平台更具可信度與視覺焦點。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center lg:flex-row-reverse">
+                    <div class="lg:order-2 relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-purple-400 to-pink-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                        <div class="relative bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-2xl">
+                             <img src="https://andy-wei.com/wp-content/uploads/2025/12/截圖-2025-12-07-下午5.27.14.png" alt="E-commerce Design" class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                    </div>
+                    <div class="lg:order-1">
+                        <h3 class="text-2xl font-bold text-white mb-4">針對商業模式去設計網站</h3>
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            我們將 即時訊號 → 量化建議 → 會員報告 → 註冊流程<br>
+串成一條順暢、自然的使用者旅程。</p>
+                        <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700 mb-6">
+                            <p class="text-slate-300 italic text-sm">董事長看完都說："這跟其他傳統投顧網站不一樣，很好看，有美感"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Results Section -->
+    <section id="seo-portfolio" class="py-24 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <span class="text-green-400 font-bold tracking-wider text-sm uppercase">SEO 成果實證</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mt-2 mb-4">你需要的不只是流量，而是轉換</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">我們透過穩定的策略，協助客戶突破成長瓶頸。</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- SEO Case 1 -->
+                <div class="bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden hover:border-green-500/50 transition-colors group flex flex-col">
+                    <!-- Image Container: Fixed Height h-80, background color matching card body -->
+                    <div class="relative w-full h-80 bg-slate-900 flex items-center justify-center overflow-hidden">
+                         <!-- Gradient at the bottom, occupying the padding space -->
+                        <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent z-10 pointer-events-none"></div>
+                        
+                        <!-- Image: contained, padded, bottom padding increased to clear gradient -->
+                        <img src="https://andy-wei.com/wp-content/uploads/2025/12/未命名設計-1.png" class="w-full h-full object-contain p-4 pb-16 opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" alt="Traffic Growth Chart">
+                        
+                        <div class="absolute bottom-4 left-4 z-20">
+                            <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-bold rounded-full border border-green-500/30">Podcast 製作公司</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-2">針對用戶痛點製作內容</h3>
+                        <p class="text-slate-400 text-sm mb-6">針對 Podcast 有需求的客戶整理出核心關鍵字，撰寫 8 篇文章，就讓 SEO 流量成長 4.4 倍，並且詢問數量倍增。</p>
+                        
+                        <div class="mt-auto grid grid-cols-2 gap-4 border-t border-slate-800 pt-6">
+                            <div>
+                                <div class="text-3xl font-bold text-white">Top 3</div>
+                                <div class="text-xs text-slate-500">核心關鍵字排名</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-green-400">+443%</div>
+                                <div class="text-xs text-slate-500">網站流量</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SEO Case 2 -->
+                <div class="bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden hover:border-blue-500/50 transition-colors group flex flex-col">
+                    <!-- Image Container: Fixed Height h-80 -->
+                    <div class="relative w-full h-80 bg-slate-900 flex items-center justify-center overflow-hidden">
+                        <!-- Gradient at the bottom -->
+                        <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent z-10 pointer-events-none"></div>
+                        
+                        <!-- Image: contained, padded, bottom padding increased -->
+                        <img src="https://andy-wei.com/wp-content/uploads/2025/12/未命名設計.png" class="w-full h-full object-contain p-4 pb-16 opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" alt="Analytics Data">
+                        
+                        <div class="absolute bottom-4 left-4 z-20">
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-bold rounded-full border border-blue-500/30">手搖飲料店</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-2">佈局電商關鍵字</h3>
+                        <p class="text-slate-400 text-sm mb-6">針對相關商品佈局用戶會搜尋的關鍵字，優化 4 篇舊文章，讓這些頁面流量成長 11 倍，總流量翻倍。</p>
+                        
+                        <div class="mt-auto grid grid-cols-2 gap-4 border-t border-slate-800 pt-6">
+                            <div>
+                                <div class="text-3xl font-bold text-white">4<span class="text-lg text-slate-500"> 篇文章</span></div>
+                                <div class="text-xs text-slate-500">商品相關關鍵字</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-blue-400">1131%</div>
+                                <div class="text-xs text-slate-500">頁面流量成長</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Demo Section -->
+    <section id="ai-demo" class="py-24 bg-slate-950 relative overflow-hidden">
+        <div class="absolute top-0 w-full h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 text-purple-300 text-sm font-medium mb-4">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <span>AI SEO 未來展示</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    當 SEO 到位，AI 就會替你做行銷
+                </h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">
+                    AI 搜尋助手將更頻繁地出現在消費者生活中。<br/>
+                    當你的網站內容結構完整、SEO 做得好，AI 會主動推薦你的品牌。
+                </p>
+            </div>
+
+            <!-- Chat Window -->
+            <div class="w-full max-w-3xl mx-auto bg-slate-900 rounded-xl border border-slate-700 shadow-2xl overflow-hidden flex flex-col h-[500px] mb-16">
+                <!-- Header -->
+                <div class="bg-slate-800 px-4 py-3 flex items-center gap-2 border-b border-slate-700">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <div class="ml-4 px-3 py-1 bg-slate-900 rounded text-xs text-slate-400 flex items-center gap-2">
+                        <span>AI Search Assistant</span>
+                    </div>
+                </div>
+
+                <!-- Chat Body -->
+                <div id="chat-body" class="flex-1 p-6 space-y-6 overflow-y-auto bg-slate-900/50 relative">
+                    <!-- Start State Message (Initially visible) -->
+                    <div id="initial-state" class="h-full flex items-center justify-center text-slate-500 text-sm">
+                        <span class="animate-pulse">等待對話觸發...</span>
+                    </div>
+                    <!-- Messages will appear here -->
+                    <div id="message-container" class="space-y-6 pb-20"></div>
+                </div>
+            </div>
+
+            <!-- NEW CTA Section -->
+            <div class="text-center">
+                <!-- Outer Gradient Border -->
+                <div class="inline-block p-1 rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+                    <!-- Inner Content -->
+                    <div class="bg-slate-950 rounded-xl px-6 py-10 md:px-12 max-w-3xl">
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">
+                            別讓競爭對手搶先佔領 <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-pink-400">AI 的推薦席位</span>
+                        </h3>
+                        <p class="text-slate-400 mb-8 text-lg leading-relaxed">
+                            搜尋行為正在改變。現在佈局 AISEO (AI Search Optimization)，<br class="hidden md:block">
+                            當別人還在抱怨 Google 流量減少時，您的品牌已成為 AI 的「推薦首選」。
+                        </p>
+                        <a href="https://lin.ee/5aCPj7m" target="_blank" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-indigo-600 rounded-full hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-500/30 hover:-translate-y-1">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            立即諮詢
+                        </a>
+                        <p class="mt-4 text-xs text-slate-500">每日名額有限</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-12 border-t border-slate-800/50 text-center">
+        <p class="text-slate-500 text-sm">© 2025 Andy SEO & Development. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // --- AI Simulation Logic ---
+        let isSimulating = false;
+        let simulationTimeout;
+
+        // Start the sequence
+        function startSimulation() {
+            if (isSimulating) return;
+            isSimulating = true;
+            
+            const container = document.getElementById('message-container');
+            document.getElementById('initial-state').style.display = 'none'; 
+
+            // 1. User Message (Immediate)
+            addMessage('user', "台灣有哪些推薦的租屋平台？");
+
+            // 2. Typing Indicator (0.5s)
+            setTimeout(() => {
+                showTyping(container);
+            }, 500);
+
+            // 3. AI Response (2.5s)
+            setTimeout(() => {
+                removeTyping();
+                addMessage('ai', "根據資料分析，我會推薦 OOO、XXX。");
+                
+                // 4. Citation Card (3.3s)
+                setTimeout(() => {
+                    addCitationCard(container);
+                    
+                    // 5. Loop Reset (Wait 5 seconds then restart)
+                    setTimeout(() => {
+                        resetAndLoop();
+                    }, 5000);
+
+                }, 800);
+
+            }, 2500);
+        }
+
+        // Reset and start again
+        function resetAndLoop() {
+            const container = document.getElementById('message-container');
+            // Fade out effect
+            container.style.opacity = '0';
+            container.style.transition = 'opacity 0.5s';
+
+            setTimeout(() => {
+                // Clear content
+                container.innerHTML = '';
+                container.style.opacity = '1';
+                isSimulating = false;
+                
+                // Restart if still in view
+                startSimulation();
+            }, 500);
+        }
+
+        function addMessage(role, text) {
+            const container = document.getElementById('message-container');
+            const div = document.createElement('div');
+            div.className = `flex gap-4 ${role === 'user' ? 'justify-end' : 'justify-start'} fade-in-up`;
+            
+            let iconHtml = role === 'ai' ? 
+                `<div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex-shrink-0 flex items-center justify-center"><svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>` : '';
+
+            let contentHtml = `
+                <div class="max-w-[80%] rounded-2xl px-5 py-4 ${role === 'user' ? 'bg-indigo-600 text-white rounded-tr-none' : 'bg-slate-800 text-slate-200 rounded-tl-none border border-slate-700'}">
+                    <p class="leading-relaxed font-medium">${text}</p>
+                </div>
+            `;
+
+            div.innerHTML = role === 'ai' ? iconHtml + contentHtml : contentHtml + iconHtml;
+            container.appendChild(div);
+            scrollToBottom();
+        }
+
+        function showTyping(container) {
+            const div = document.createElement('div');
+            div.id = 'typing-indicator';
+            div.className = 'flex gap-4 justify-start fade-in-up';
+            div.innerHTML = `
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex-shrink-0 flex items-center justify-center"><svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>
+                <div class="bg-slate-800 px-4 py-3 rounded-2xl rounded-tl-none border border-slate-700 flex items-center gap-1">
+                    <div class="w-2 h-2 bg-slate-400 rounded-full typing-dot"></div>
+                    <div class="w-2 h-2 bg-slate-400 rounded-full typing-dot"></div>
+                    <div class="w-2 h-2 bg-slate-400 rounded-full typing-dot"></div>
+                </div>
+            `;
+            container.appendChild(div);
+            scrollToBottom();
+        }
+
+        function removeTyping() {
+            const el = document.getElementById('typing-indicator');
+            if(el) el.remove();
+        }
+
+        function addCitationCard(container) {
+            const div = document.createElement('div');
+            div.className = 'flex gap-4 justify-start fade-in-up';
+            
+            div.innerHTML = `
+                <div class="w-8 h-8 flex-shrink-0"></div>
+                <div class="max-w-[80%] w-full">
+                    <div class="bg-slate-900 rounded-xl border border-indigo-500/50 overflow-hidden shadow-[0_0_20px_rgba(99,102,241,0.15)]">
+                        <div class="h-32 bg-slate-800 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900">
+                                <div class="p-4 opacity-50">
+                                    <div class="w-1/3 h-2 bg-slate-600 rounded mb-2"></div>
+                                    <div class="w-full h-8 bg-indigo-900/50 rounded mb-2"></div>
+                                    <div class="flex gap-2">
+                                        <div class="w-1/3 h-16 bg-slate-700 rounded"></div>
+                                        <div class="w-1/3 h-16 bg-slate-700 rounded"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute top-2 right-2 bg-indigo-600 text-white text-xs px-2 py-1 rounded shadow-lg font-bold">
+                                AI Top Pick
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center gap-2 mb-1">
+                                <div class="w-4 h-4 bg-indigo-500 rounded-sm"></div>
+                                <span class="font-bold text-white text-sm">OOO | 台灣最方面的租屋平台</span>
+                            </div>
+                            <p class="text-xs text-slate-400 line-clamp-2 mt-2">
+                                想找台北、新北高品質房源？OOO 提供最真實的屋況照片與房東資訊，找房不再踩雷...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.appendChild(div);
+            scrollToBottom();
+        }
+
+        function scrollToBottom() {
+            const body = document.getElementById('chat-body');
+            body.scrollTop = body.scrollHeight;
+        }
+
+        // --- Intersection Observer for Auto-Trigger ---
+        document.addEventListener("DOMContentLoaded", function() {
+            let observerOptions = {
+                root: null, // viewport
+                rootMargin: '0px',
+                threshold: 0.5 // Trigger when 50% of the element is visible
+            };
+
+            let observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Start simulation if not already running
+                        if (!isSimulating) {
+                            startSimulation();
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // Observe the AI Demo section
+            const aiSection = document.getElementById('ai-demo');
+            if (aiSection) {
+                observer.observe(aiSection);
+            }
+        });
+    </script>
+</body>
+</html>
